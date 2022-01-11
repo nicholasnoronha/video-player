@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Meu primeiro site de landing page junto de um pequeno projeto de vídeo player custom!">
+    <title>Ladding Page - (Com custom player)</title>
+    <script src="https://kit.fontawesome.com/d6aba304e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <img class="headerImage" src="/src/media/logo.png" alt="Logo">
+        <nav class="headerMenu">
+            <a class="headerMenuItem" href="https://www.linkedin.com/in/nicholas-noronha-1b613817a/" target="_blank">Contato Linkedin</a>
+            <a class="headerMenuItem" href="">Parceiros</a>
+            <a class="headerMenuItem" href="">Sobre Mim</a>
+        </nav>     
+    </header>
+
+    <main class="content">
+        <section class="mainContent">
+            <div class="mainCopntentWrited">
+                <h1 class="mainCopntentWritedTitle">Nicholas Noronha</h1>
+                <h2 class="mainCopntentWritedSubtitle">Currículo?</h2>
+                <button class="mainCopntentButton">Faça Sua Cotação!</button>
+            </div>
+            <div class="video-player">
+                <video src="/src/media/aa.mp4" poster="/src/media/videoPoster.png" class="video"></video>
+                <div class="player-controls">
+                    <div class="progressBar">
+                        <div class="progress"></div>
+                    </div>
+        
+                    <div class="inner-player-controls">
+                        <button class="play-button" title="Play">►</i></i></button>
+                        <button class="mute control-button"> <!-- aria-label="Mute" para acessibilidade -->
+                            <div class="slash"></div>
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="hoverableVolume control-button">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+        
+                        <input type="range" class="volume hide" min="0" max="1" step="0.01" value="0.5">
+                    
+                        <button class="fullscreen control-button">
+                            <i class="fas fa-expand"></i>
+                        </button>    
+        
+                        <div class="time">
+                            <span class="current">0:00</span> / <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="/src/video.js"></script>
+        </section>
+        <section class="secondaryContent">
+            <h3 class="secondaryContentTitle">Loren</h3>
+            <p class="secondaryContentTitleParagraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea exercitationem harum, alias reprehenderit cumque et facere recusan. </p>
+            <p class="secondaryContentTitleParagraph">Lorem ipsum dolor, sit amet consectetconsectetur adipisicing elit. Nam ea exercitationem harum, alias reprehenderit cumque et facere recusan.</p>
+            <p class="secondaryContentTitleParagraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ea exercitationem harum, alias reprehenderit cumque et facere recusan.</p>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <i class="fab fa-facebook"></i>
+        <i class="fa fa-volume"></i>
+        <i class="fa fa-pause"></i>
+
+        <img class="footerImage" src="/src/media/logo.png" alt="Logo">
+    </footer>
+</body>
+</html>
