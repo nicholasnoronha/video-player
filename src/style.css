@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@300&display=swap');
-/* 
-html {
-    box-sizing: border-box; from player video tutorial
-} */
 
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,14 +8,8 @@ html {
 
 }
 
-/*,
-*:before,
-*:after {
-   box-sizing: inherit;
-}*/
 
 .header {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,27 +19,21 @@ html {
 }
 
 .headerImage {
-
     width: 100px;
     height:72px;
     border-radius: 50px;
 }
 
 .headerMenu {
-
     display: flex;
     gap: 30px;
 }
 
 body {
     padding: 0;
-    /*display: flex; from player video tutorial*/
     background: 333;
     min-height: 100vh;
     background-size: cover;
-    /* align-items: center; ***/
-    /* justify-content: center; ***/
-
     font-size: 100%;
     background: linear-gradient(70deg, #2F2325 16.60%, #8E5D52 85%);
 }
@@ -62,7 +45,6 @@ body {
 }
 
 .headerMenuItem {
-
     font-family: 'Roboto', sans-serif;
     color: #fff2e7;
     font-weight: 400;
@@ -70,13 +52,11 @@ body {
 }
 
 .content {
-
     margin-bottom: 48px;
     border-top: 0.4px solid #FFF2E7;
 }
 
 .mainContent {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -84,14 +64,12 @@ body {
 }
 
 .mainCopntentWrited {
-
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
 .mainCopntentWritedTitle {
-
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 64px;
@@ -99,7 +77,6 @@ body {
 }
 
 .mainCopntentWritedSubtitle {
-
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -107,7 +84,6 @@ body {
 }
 
 .mainCopntentButton {
-
     background-color: #ECD6C4;
     width: 185px;
     height: 87px;
@@ -125,7 +101,6 @@ body {
 }
 
 .secondaryContent {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +109,6 @@ body {
 }
 
 .secondaryContentTitle {
-
     border-top: 0.4px solid #FFF2E7;
     padding-top: 48px;
     font-family: 'Raleway', sans-serif;
@@ -145,7 +119,6 @@ body {
 }
 
 .secondaryContentTitleParagraph {
-
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 18px;
@@ -153,13 +126,11 @@ body {
 }
 
 .footer {
-
     border-top: 0.4px solid #FFF2E7;
     padding: 32px;
 }
 
 .footerImage {
-
     width: 100px;
     height:72px;
     border-radius: 50px;
@@ -170,8 +141,7 @@ body {
 .video {
     padding-top: 50px;
     width: 100%;
-
-        height: 100%;
+    height: 100%;
 }
 
 .player-controls {
@@ -191,7 +161,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-around; */
 } 
 
 .video-player:hover .player-controls {
@@ -203,14 +172,13 @@ body {
     width: 8%;
     border: none;
     background: transparent;
-    /* background: rgba(0, 0, 0, 0.5); */
     color: white;
     padding: 10px;
+    margin-top: 1px;
 }
 
 .mute {
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 5%;
@@ -235,37 +203,30 @@ body {
 }
 
 .hoverableVolume {
-    padding-right: 10px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
 }
 
-.hoverableVolume:hover + .hide {
-    display: block;
-    color:white;
-}
 
-.inner-player-controls > input[type="range"] {
-    /* display: flex; */
+.hoverable-volume > input[type="range"] {
     -webkit-appearance: none;
     background: transparent;
     margin: 0;
-    /* padding: 0 10px; not working */
     align-items: center;
     justify-content: right;
-    /* position:absolute; right:100px; margin-top:23px; // */
-    /* background-color: linear-gradient(to right, yellow , red); */
 }
-/*not working*/
-.inner-player-controls > input[type="range"]::-webkit-slider-runnable-track {
+
+.hoverable-volume > input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
     height: 10px;
     cursor: pointer;    
     background: linear-gradient(to right, white, rgb(235, 108, 108));
-
+    border-radius: 5px;
 }
-/*not working*/
-.inner-player-controls > input[type="range"]::-webkit-slider-thumb {
-    /* background-color: linear-gradient(to right, yellow , red); */
+
+.hoverable-volume > input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 10px;
     width: 10px;
@@ -289,13 +250,12 @@ body {
     font-family: Roboto, "Helvetica Neue";
 }
 
-.progressBar {
+.progress-bar {
     position: relative;
     display: flex;
     width: 100%;
     height: 6px;
     transition: 0.3s;
-    /* background: black; */
     cursor: pointer;
 }
 

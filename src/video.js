@@ -4,11 +4,15 @@ const playButton = videoPlayer.querySelector(".play-button")
 const volume = videoPlayer.querySelector(".volume")
 const currentTimeElement = videoPlayer.querySelector(".current")
 const durationTimeElement = videoPlayer.querySelector(".duration")
-const progress = videoPlayer.querySelector('.progressBar')
+const progress = videoPlayer.querySelector('.progress-bar')
 const progressBar = videoPlayer.querySelector('.progress')
 const muteButton = videoPlayer.querySelector(".mute")
-const muteButton2 = videoPlayer.querySelector(".hoverableVolume")
 const fullscreenButton = videoPlayer.querySelector(".fullscreen")
+
+const hoverableVolume = videoPlayer.querySelector(".hoverable-volume")
+let lastVolume
+
+
 
 // play and pause button
 playButton.addEventListener("click", (e) =>{
@@ -24,7 +28,7 @@ playButton.addEventListener("click", (e) =>{
 //volume
 volume.addEventListener('mousemove', (e) => {
     video.volume = e.target.value
-})
+}) //done
 
 // current time and duration of the vídeo
 const currentTime = () => {
@@ -55,12 +59,13 @@ muteButton.addEventListener("click", () => {
     muteButton.classList.toggle("muted")
 })
 
-muteButton2.addEventListener("mouseenter", () => {
+hoverableVolume.addEventListener("mouseover", () => {
+    volume.classList.toggle("hide")
+})
 
-}) //
-muteButton2.addEventListener("mouseenter", () => {
-    
-}) //
+hoverableVolume.addEventListener("mouseout", () => {
+    volume.classList.toggle("hide")
+})
 
 fullscreenButton.addEventListener("click", () => {
     video.requestFullscreen();
