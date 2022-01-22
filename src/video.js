@@ -17,6 +17,7 @@ let lastVolume
 // play and pause button
 playButton.addEventListener("click", (e) =>{
     if(video.paused) {
+        console.log("play")
         video.play()
         e.target.textContent = "| |"
     } else {
@@ -37,8 +38,11 @@ const currentTime = () => {
     let durationMinutes = Math.floor(video.duration / 60)
     let durationSeconds = Math.floor(video.duration - durationMinutes * 60)
 
+    console.log(currentTimeElement.innerHTML)
+    console.log(durationTimeElement.innerHTML)
     currentTimeElement.innerHTML = `${currentMinutes}:${currentSeconds < 10 ? '0' + currentSeconds : currentSeconds}`
-    durationTimeElement.innerHTML = `${durationMinutes}:${durationSeconds < 10 ? '0' + durationSeconds : duration}`
+    durationTimeElement.innerHTML = `${durationMinutes}:${durationSeconds < 10 ? '0' + durationSeconds : durationSeconds}`
+    cnosole.log(durationMinutes, durationSeconds)
 }
 
 video.addEventListener("timeupdate", currentTime)
@@ -54,19 +58,32 @@ progress.addEventListener('click', (e) => {
     video.currentTime = progressTime
 })
 
+//mute button
 muteButton.addEventListener("click", () => {
-    video.muted = !video.muted;
+    //volumeMute() //from coffi stuff
+    video.muted = !video.muted; // from videoPlayer
     muteButton.classList.toggle("muted")
-})
+}) //done 
 
-hoverableVolume.addEventListener("mouseover", () => {
-    volume.classList.toggle("hide")
-})
+// hoverableVolume.addEventListener("mouseover", () => {
+//     volume.classList.toggle("hide")
+// })
 
 hoverableVolume.addEventListener("mouseout", () => {
     volume.classList.toggle("hide")
 })
 
+
 fullscreenButton.addEventListener("click", () => {
     video.requestFullscreen();
 })
+
+// const volumeMute = function() {
+//     let lastVolume
+//     let tempVolume;
+//     lastVolume = video.volume
+//     console.log("last volume: " + lastVolume)
+//     video.volume > 0 ? tempVolume = 0 : tempVolume = lastVolume;
+//     video.volume = tempVolume;
+//     return volume.value = tempVolume
+// };
