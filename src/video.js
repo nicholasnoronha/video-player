@@ -12,8 +12,6 @@ const fullscreenButton = videoPlayer.querySelector(".fullscreen")
 const hoverableVolume = videoPlayer.querySelector(".hoverable-volume")
 let lastVolume
 
-
-
 // play and pause button
 playButton.addEventListener("click", (e) =>{
     if(video.paused) {
@@ -29,7 +27,7 @@ playButton.addEventListener("click", (e) =>{
 //volume
 volume.addEventListener('mousemove', (e) => {
     video.volume = e.target.value
-}) //done
+})
 
 // current time and duration of the vídeo
 const currentTime = () => {
@@ -63,15 +61,11 @@ muteButton.addEventListener("click", () => {
     //volumeMute() //from coffi stuff
     video.muted = !video.muted; // from videoPlayer
     muteButton.classList.toggle("muted")
-}) //done 
+})
 
-// hoverableVolume.addEventListener("mouseover", () => {
+// hoverableVolume.addEventListener("mouseout", () => {
 //     volume.classList.toggle("hide")
 // })
-
-hoverableVolume.addEventListener("mouseout", () => {
-    volume.classList.toggle("hide")
-})
 
 
 fullscreenButton.addEventListener("click", () => {
